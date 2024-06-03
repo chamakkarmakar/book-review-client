@@ -10,15 +10,15 @@ const NavBar = () => {
   const menuItems = [
     {
       menu: 'home',
-      url: '/home'
+      url: '/'
     },
     {
       menu: 'about',
       url: '/about'
     },
     {
-      menu: 'service',
-      url: '/service'
+      menu: 'books',
+      url: '/books'
     },
     {
       menu: 'contact',
