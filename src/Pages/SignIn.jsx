@@ -1,10 +1,14 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SignWithGoogle from '../Components/GoogleProvider/SignWithGoogle'
 import { AuthContext } from '../Components/AuthProvider/AuthProvider';
 
 const SignIn = () => {
     const { signIn, user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location?.state?.from?.pathname || "/";
 
     const handleSignIn = (event) => {
         event.preventDefault();
@@ -22,7 +26,13 @@ const SignIn = () => {
                 console.log(errorMessage);
             });
         event.target.reset();
+
     };
+    useEffect(() => {
+        if (user) {
+          navigate(from, { replace: true });
+        }
+      }, [user, from, navigate]);
 
     return (
         <div className="flex h-screen items-center justify-center bg-indigo-500/20 p-6 md:p-0">
