@@ -20,8 +20,8 @@ const Home = () => {
         <h1 className='text-center text-5xl font-semibold font-serif'>Popular Books</h1>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-6'>
           {
-            books.map(book =>
-              <Book book={book} />
+            books.map((book,index) =>
+              <Book key={index} book={book} />
             )
           }
 
@@ -31,8 +31,8 @@ const Home = () => {
         <h1 className='text-center text-5xl font-semibold font-serif'>Reviews</h1>
         <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
           {
-            books.map(book =>
-              <Reviews book={book} />
+            books.map((book,index) =>
+              <Reviews key={index} book={book} />
             )
           }
 
