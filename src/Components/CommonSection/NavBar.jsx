@@ -23,8 +23,8 @@ const NavBar = () => {
             url: '/contact'
         },
         {
-            menu: 'login',
-            url: '/login'
+          menu: 'login',
+          url: '/login'
         }
     ]
 
@@ -54,14 +54,14 @@ const NavBar = () => {
 
         <div className="md:w-96 w-full md:mx-10 mx-0 ">
 
-          <div className={`w-full flex md:flex-row flex-col md:justify-between justify-center items-center md:z-auto z-[-1] md:shadow-none shadow-xl md:bg-transparent bg-sky-800 md:py-0 py-2 md:static duration-300 delay-150 transition-all ease-linear absolute left-0 right-0 
+          <div className={`w-full flex md:flex-row flex-col md:justify-around justify-center items-center md:mt-2 mt-0 md:z-auto z-[-1] md:shadow-none shadow-xl md:bg-transparent bg-sky-800 md:py-0 py-2 md:static duration-300 delay-150 transition-all ease-linear absolute left-0 right-0 
           ${open ? 'top-14' : '-top-80'}`}>
             {
               menuItems.map(item =>
                 <Link key={item.menu}
                   onClick={() => setOpen(!open)}
                   to={item.url}
-                  className='text-white text-center md:w-auto w-full md:mt-0 mt-3 font-bold capitalize px-3 py-1 rounded hover:text-amber-700 hover:shadow-sm'
+                  className='relative h-10 text-center w-28 font-semibold origin-top transform rounded-lg capitalize text-xl text-white before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-sky-500'
                 >{item.menu}
                 </Link>
               )
