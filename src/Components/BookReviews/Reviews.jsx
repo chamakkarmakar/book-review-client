@@ -5,7 +5,7 @@ const Reviews = ({book}) => {
   return (
     <div className="mx-auto my-20 w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4 font-sans shadow-lg dark:bg-[#18181B]">
         <div className="flex h-44 w-full justify-center lg:h-[250px]">
-            <image width={300} height={300} className="h-full w-full rounded-lg bg-black/40" src={book_image} alt={title} />
+            <img width={300} height={300} className="h-full w-full rounded-lg bg-black/40" src={book_image} alt={title} />
         </div>
         <div className="mx-auto w-[85%] space-y-2 text-center font-semibold">
             <h6 className="text-sm md:text-base lg:text-lg">{title}</h6>
