@@ -16,9 +16,9 @@ const Banner = () => {
     return (
         <div className="w-full mt-[-60px] h-[650px] bg-no-repeat bg-cover bg-center font-serif" style={{ backgroundImage:  `url(${images[current]})` }}>
             <div className="w-full h-full bg-opacity-50 bg-rose-50 flex flex-col justify-center items-center">
-                <div className=" md:mt-52 mt-36 md:w-3/4 w-full md:bg-inherit bg-indigo-100 p-3">
+                <div className=" md:mt-52 mt-36 md:w-3/4 w-full">
                     <h1 className="md:text-6xl text-3xl text-center font-semibold md:px-0 px-2">Discover Your Best Books Now</h1>
-                    <p className='py-3 md:px-20 text-center px-10 md:text-lg text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit veritatis commodi voluptatum officia expedita reprehenderit, nesciunt dolor ipsum vel sit.</p>
+                    <p className='py-3 md:px-20 text-center px-10 md:text-lg text-sm'> With thousands of reviews covering every genre, you'll never run out of amazing books to explore. Join our community of readers, share your insights, and help others find their next great read.</p>
 
                     <div className="flex md:w-1/2 w-full mx-auto justify-around  items-center">
                         <button className='py-3 px-8 bg-rose-800 text-white md:text-lg text-sm rounded-full hover:bg-rose-950 hover:border-amber-700'>Shop Now</button>
