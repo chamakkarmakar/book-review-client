@@ -9,6 +9,7 @@ import Dashboard from "../Pages/Dashboard";
 import AllReviews from "../Pages/AllReviews";
 import AddReviews from "../Pages/AddReviews";
 import EditReview from "../Pages/EditReview";
+import SingleDetails from "../Pages/SingleDetails";
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,14 @@ export const router = createBrowserRouter([
         {
           path: "/",
           element: <Home />
+        },
+        {
+          path: "/books/:id",
+          element: <SingleDetails />,
+          loader: ({ params }) =>
+            fetch(
+              `http://localhost:5000/books/${params.id}`
+            ),
         },
         {
           path: "login",
@@ -65,7 +74,7 @@ export const router = createBrowserRouter([
               </PrivateRouter>
             ),
             loader: ({ params }) =>
-              fetch(`http://localhost:3000/books/${params.id}`),
+              fetch(`http://localhost:5000/books/${params.id}`),
           },
           
         ]

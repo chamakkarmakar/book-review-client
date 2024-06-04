@@ -8,21 +8,22 @@ const AllReviews = () => {
 
   useEffect(() => {
     async function load() {
-      const booksRes = await fetch("http://localhost:3000/books");
+      const booksRes = await fetch("http://localhost:5000/books");
       const booksData = await booksRes.json();
+      console.log(booksData);
       setBooks(booksData);
     }
     load();
   }, [])
-  const handleDeleteReviews = async (id) => {
-    await fetch(`http://localhost:3000/books/${id}`, {
+  const handleDeleteReviews = async (_id) => {
+    await fetch(`http://localhost:5000/books/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setShowToast(true);
-        setBooks(books.filter((book) => book.id !== id));
+        setBooks(books.filter((book) => book._id !== _id));
       });
     setTimeout(() => {
       setShowToast(false);

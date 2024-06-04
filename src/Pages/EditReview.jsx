@@ -4,6 +4,7 @@ import Toast from '../Components/Toast/Toast';
 
 const EditReview = () => {
     const book = useLoaderData();
+    console.log(book);
     const [showToast, setShowToast] = useState(false);
 
     const [title, setTitle] = useState(book.title);
@@ -28,7 +29,7 @@ const EditReview = () => {
 
         const data = { title, author, category,book_image , price, ratings, review_text};
 
-        await fetch(`http://localhost:3000/books/${book.id}`, {
+        await fetch(`http://localhost:5000/books/${book._id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",

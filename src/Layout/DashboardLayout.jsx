@@ -23,11 +23,7 @@ const DashboardLayout = () => {
                 isPending ? "pending" : isActive ? "bg-sky-800 w-auto md:px-20 px-10 py-2" : ""
               }>Dashboard</NavLink>
             </li>
-            <li className='text-white mb-5 md:text-lg text-md '>
-              <NavLink to="all-books" className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "bg-sky-800 w-auto md:px-20 px-10 py-2" : ""
-              }>All Books</NavLink>
-            </li>
+           
             <li className='text-white mb-5 md:text-lg text-md '>
               <NavLink to="all-reviews" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-sky-800 w-auto md:px-20 px-10 py-2" : ""

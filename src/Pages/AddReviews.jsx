@@ -16,9 +16,9 @@ const AddReviews = () => {
         const review_text = form.review_text.value;
         const book_image = form.book_image.value;
 
-        const data = { title, author, category,book_image , price, ratings, review_text};
+        const data = { title, author, category, book_image, price, ratings, review_text };
 
-        await fetch("http://localhost:3000/books", {
+        await fetch("http://localhost:5000/books", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -85,7 +85,7 @@ const AddReviews = () => {
                     <div className="mt-2">
                         <input
                             className="w-full rounded-lg border border-indigo-600 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600/50 md:w-full"
-                            type="url"
+                            type="text"
                             name="book_image"
                             placeholder="Image URL"
                         />
@@ -98,7 +98,7 @@ const AddReviews = () => {
                             placeholder="Ratings"
                         />
                     </div>
-                    
+
                     <div className="mt-2 flex justify-center items-center">
                         <input
                             className="btn mt-4 w-full bg-indigo-600 hover:bg-indigo-800 cursor-pointer rounded-xl font-semibold text-white p-4"

@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "id": "1",
+      
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "category": "Classic",
@@ -11,7 +11,7 @@
       "review_text": "A captivating tale of love, wealth, and the American Dream. Fitzgerald's prose is exquisite."
     },
     {
-      "id": "2",
+      
       "title": "1984",
       "author": "George Orwell",
       "category": "Dystopian",
@@ -21,7 +21,7 @@
       "review_text": "A chilling depiction of a dystopian future. Orwell's vision is both haunting and thought-provoking."
     },
     {
-      "id": "3",
+      
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "category": "Classic",
@@ -31,7 +31,7 @@
       "review_text": "A powerful exploration of racial injustice in the Deep South. Lee's characters are deeply moving."
     },
     {
-      "id": "4",
+      
       "title": "Pride and Prejudice",
       "author": "Jane Austen",
       "category": "Romance",
@@ -41,7 +41,7 @@
       "review_text": "A delightful romantic comedy with sharp social commentary. Austen's wit is timeless."
     },
     {
-      "id": "5",
+      
       "title": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "category": "Classic",
@@ -51,7 +51,7 @@
       "review_text": "A raw and honest portrayal of teenage angst. Salinger's narrative voice is unique and compelling."
     },
     {
-      "id": "6",
+      
       "title": "Moby-Dick",
       "author": "Herman Melville",
       "category": "Adventure",
@@ -61,7 +61,7 @@
       "review_text": "An epic tale of obsession and the sea. Melville's depth and symbolism are profound."
     },
     {
-      "id": "7",
+      
       "title": "War and Peace",
       "author": "Leo Tolstoy",
       "category": "Historical",
@@ -71,7 +71,7 @@
       "review_text": "A monumental work of literature. Tolstoy's exploration of human nature and history is unparalleled."
     },
     {
-      "id": "8",
+      
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "category": "Fantasy",
@@ -81,7 +81,7 @@
       "review_text": "A charming and adventurous tale. Tolkien's world-building and storytelling are extraordinary."
     },
     {
-      "id": "9",
+      
       "title": "Fahrenheit 451",
       "author": "Ray Bradbury",
       "category": "Dystopian",
@@ -91,7 +91,7 @@
       "review_text": "A powerful warning about censorship and conformity. Bradbury's vision is both alarming and inspiring."
     },
     {
-      "id": "10",
+      
       "title": "Jane Eyre",
       "author": "Charlotte Brontë",
       "category": "Classic",
