@@ -86,8 +86,8 @@
       "author": "Ray Bradbury",
       "category": "Dystopian",
       "book_image": "https://example.com/images/fahrenheit-451.jpg",
-      "price": 9.49,
-      "ratings": 4.6,
+      "price": "9.80",
+      "ratings": "4.8",
       "review_text": "A powerful warning about censorship and conformity. Bradbury's vision is both alarming and inspiring."
     },
     {

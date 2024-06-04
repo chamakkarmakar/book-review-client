@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Book = ({ book }) => {
-    const {title,book_image,author,review_text,ratings,category}=book
+    const {title,book_image,author,review_text,ratings,category,price}=book
    
     return (
         <div className="mx-auto my-20 w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4 font-sans shadow-lg dark:bg-[#18181B]">
@@ -14,7 +14,7 @@ const Book = ({ book }) => {
         </div>
         <p className="text-xs font-semibold text-gray-700 md:text-sm">"{review_text}"</p>
         <div className='flex justify-between items-center'>
-        <p className="text-xs font-semibold text-gray-700 md:text-sm">ratings: {ratings}</p>
+        <p className="text-xs font-semibold text-gray-700 md:text-sm">${price}</p>
         <p className="text-xs font-semibold text-gray-400 md:text-sm"> {category}</p>
         </div>
 

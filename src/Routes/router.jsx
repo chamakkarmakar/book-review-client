@@ -8,6 +8,7 @@ import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../Pages/Dashboard";
 import AllReviews from "../Pages/AllReviews";
 import AddReviews from "../Pages/AddReviews";
+import EditReview from "../Pages/EditReview";
 
 export const router = createBrowserRouter([
     {
@@ -55,7 +56,17 @@ export const router = createBrowserRouter([
                 <AddReviews />
               </PrivateRouter>
             )
-          }
+          },
+          {
+            path: "all-reviews/edit/:id",
+            element: (
+              <PrivateRouter>
+                <EditReview />
+              </PrivateRouter>
+            ),
+            loader: ({ params }) =>
+              fetch(`http://localhost:3000/books/${params.id}`),
+          },
           
         ]
     }
