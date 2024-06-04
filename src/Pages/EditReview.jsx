@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Toast from '../Components/Toast/Toast';
 
 const EditReview = () => {
+    const token = localStorage.getItem("token");
     const book = useLoaderData();
     console.log(book);
     const [showToast, setShowToast] = useState(false);
@@ -33,6 +34,7 @@ const EditReview = () => {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
+                authorization: `Bearer ${token}`,
             },
             body: JSON.stringify(data),
         })
@@ -56,7 +58,7 @@ const EditReview = () => {
     // const { title, author, category,book_image , price, ratings, review_text}=books;
   return (
     <div className='my-20 w-3/4 mx-auto'>
-            <h1 className="text-5xl font-bold text-center">Add Review</h1>
+            <h1 className="text-5xl font-bold text-center">Update Review</h1>
 
             <div className="w-full mx-auto my-16">
                 <form onSubmit={handleSubmit}>

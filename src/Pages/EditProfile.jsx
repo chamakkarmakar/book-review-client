@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Toast from '../Components/Toast/Toast';
 
 const EditProfile = () => {
+    const token = localStorage.getItem("token");
     const user = useLoaderData();
     const [showToast, setShowToast] = useState(false);
 
@@ -18,6 +19,7 @@ const EditProfile = () => {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
+                    authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify(userData),
             }
@@ -27,9 +29,9 @@ const EditProfile = () => {
                 setShowToast(true)
                 console.log(data)
             });
-            setTimeout(() => {
-                setShowToast(false);
-            }, 3000);
+        setTimeout(() => {
+            setShowToast(false);
+        }, 3000);
         form.reset();
     }
 

@@ -3,6 +3,7 @@ import ReviewsCard from '../Components/ReviewsCard/ReviewsCard';
 import Toast from '../Components/Toast/Toast';
 
 const AllReviews = () => {
+  const token = localStorage.getItem("token");
   const [books, setBooks] = useState([])
   const [showToast, setShowToast] = useState(false);
 
@@ -18,6 +19,10 @@ const AllReviews = () => {
   const handleDeleteReviews = async (_id) => {
     await fetch(`http://localhost:5000/books/${_id}`, {
       method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+        authorization: `Bearer ${token}`,
+      },
     })
       .then((res) => res.json())
       .then((data) => {

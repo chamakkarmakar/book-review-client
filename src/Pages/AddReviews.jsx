@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Toast from '../Components/Toast/Toast';
 
 const AddReviews = () => {
+    const token = localStorage.getItem("token");
     const [showToast, setShowToast] = useState(false);
 
     const handleSubmit = async (e) => {
@@ -22,6 +23,7 @@ const AddReviews = () => {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
+                authorization: `Bearer ${token}`,
             },
             body: JSON.stringify(data),
         })
