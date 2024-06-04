@@ -1,29 +1,58 @@
 import React, { useEffect, useState } from 'react'
-import Reviews from '../Components/BookReviews/Reviews';
+import ReviewsCard from '../Components/ReviewsCard/ReviewsCard';
+import Toast from '../Components/Toast/Toast';
 
 const AllReviews = () => {
-    const [books, setBooks] = useState([])
-    useEffect(() => {
-        async function load() {
-            const booksRes = await fetch("http://localhost:3000/books");
-            const booksData = await booksRes.json();
-            setBooks(booksData);
-        }
-        load();
-    }, [])
-    return (
-        <div className='my-20'>
-        <h1 className='text-center text-5xl font-semibold font-serif'>All Reviews</h1>
-        <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
-          {
-            books.map((book,index) =>
-              <Reviews key={index} book={book} />
-            )
-          }
+  const [books, setBooks] = useState([])
+  const [showToast, setShowToast] = useState(false);
 
-        </div>
+  useEffect(() => {
+    async function load() {
+      const booksRes = await fetch("http://localhost:3000/books");
+      const booksData = await booksRes.json();
+      setBooks(booksData);
+    }
+    load();
+  }, [])
+  const handleDeleteReviews = async (id) => {
+    await fetch(`http://localhost:3000/books/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setShowToast(true);
+        setBooks(books.filter((book) => book.id !== id));
+      });
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
+  return (
+    <div className='my-20'>
+      <h1 className='text-center text-5xl font-semibold font-serif'>All Reviews</h1>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
+        {
+          books.map((book, index) =>
+            <ReviewsCard 
+          key={index} 
+          book={book} 
+          handleDeleteReviews={handleDeleteReviews}
+          />
+          )
+        }
+
       </div>
-    )
+      {
+                showToast &&
+                <Toast
+                    message="Reviews deleted successfully!"
+                    show={showToast}
+                    onClose={() => setShowToast(false)}
+                />
+            }
+    </div>
+  )
 }
 
 export default AllReviews

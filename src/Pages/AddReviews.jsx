@@ -8,15 +8,15 @@ const AddReviews = () => {
         e.preventDefault();
 
         const form = e.target;
-        const id = form.id.value;
-        const book = form.book.value;
+        const title = form.title.value;
         const author = form.author.value;
         const category = form.category.value;
         const price = form.price.value;
-        const review = form.review.value;
-        const image_url = form.image_url.value;
+        const ratings = form.ratings.value;
+        const review_text = form.review_text.value;
+        const book_image = form.book_image.value;
 
-        const data = { id, book, author, category, price, review, image_url };
+        const data = { title, author, category,book_image , price, ratings, review_text};
 
         await fetch("http://localhost:3000/books", {
             method: "POST",
@@ -46,7 +46,7 @@ const AddReviews = () => {
                         <input
                             className="w-full rounded-lg border border-indigo-600 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600/50 md:w-full"
                             type="text"
-                            name="book"
+                            name="title"
                             placeholder="Book Name"
                         />
                     </div>
@@ -78,26 +78,27 @@ const AddReviews = () => {
                         <textarea style={{ resize: "none" }}
                             className="w-full rounded-lg border border-indigo-600 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600/50 md:w-full"
                             type="text"
-                            name="review"
+                            name="review_text"
                             placeholder="Your Review"
                         />
                     </div>
                     <div className="mt-2">
                         <input
                             className="w-full rounded-lg border border-indigo-600 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600/50 md:w-full"
-                            type="text"
-                            name="image_url"
+                            type="url"
+                            name="book_image"
                             placeholder="Image URL"
                         />
                     </div>
                     <div className="mt-2">
                         <input
                             className="w-full rounded-lg border border-indigo-600 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600/50 md:w-full"
-                            type="text"
-                            name="id"
-                            placeholder="ID"
+                            type="number"
+                            name="ratings"
+                            placeholder="Ratings"
                         />
                     </div>
+                    
                     <div className="mt-2 flex justify-center items-center">
                         <input
                             className="btn mt-4 w-full bg-indigo-600 hover:bg-indigo-800 cursor-pointer rounded-xl font-semibold text-white p-4"

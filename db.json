@@ -99,15 +99,6 @@
       "price": 11.49,
       "ratings": 4.7,
       "review_text": "A compelling story of resilience and self-discovery. Brontë's protagonist is unforgettable."
-    },
-    {
-      "id": "20",
-      "book": "test",
-      "author": "test",
-      "category": "test",
-      "price": "12",
-      "review": "test review",
-      "image_url": "test"
     }
   ]
 }
