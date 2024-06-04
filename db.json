@@ -1,107 +1,113 @@
 {
-    "books": 
-    [
-      {
-        "id": 1,
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "category": "Classic",
-        "book_image": "https://img.freepik.com/premium-photo/wooden-table_36051-46.jpg?w=826",
-        "price": 10.99,
-        "ratings": 4.5,
-        "review_text": "A captivating tale of love, wealth, and the American Dream. Fitzgerald's prose is exquisite."
-      },
-      {
-        "id": 2,
-        "title": "1984",
-        "author": "George Orwell",
-        "category": "Dystopian",
-        "book_image": "https://example.com/images/1984.jpg",
-        "price": 9.99,
-        "ratings": 4.8,
-        "review_text": "A chilling depiction of a dystopian future. Orwell's vision is both haunting and thought-provoking."
-      },
-      {
-        "id": 3,
-        "title": "To Kill a Mockingbird",
-        "author": "Harper Lee",
-        "category": "Classic",
-        "book_image": "https://example.com/images/to-kill-a-mockingbird.jpg",
-        "price": 8.99,
-        "ratings": 4.9,
-        "review_text": "A powerful exploration of racial injustice in the Deep South. Lee's characters are deeply moving."
-      },
-      {
-        "id": 4,
-        "title": "Pride and Prejudice",
-        "author": "Jane Austen",
-        "category": "Romance",
-        "book_image": "https://example.com/images/pride-and-prejudice.jpg",
-        "price": 11.99,
-        "ratings": 4.7,
-        "review_text": "A delightful romantic comedy with sharp social commentary. Austen's wit is timeless."
-      },
-      {
-        "id": 5,
-        "title": "The Catcher in the Rye",
-        "author": "J.D. Salinger",
-        "category": "Classic",
-        "book_image": "https://example.com/images/catcher-in-the-rye.jpg",
-        "price": 7.99,
-        "ratings": 4.2,
-        "review_text": "A raw and honest portrayal of teenage angst. Salinger's narrative voice is unique and compelling."
-      },
-      {
-        "id": 6,
-        "title": "Moby-Dick",
-        "author": "Herman Melville",
-        "category": "Adventure",
-        "book_image": "https://example.com/images/moby-dick.jpg",
-        "price": 12.99,
-        "ratings": 4.0,
-        "review_text": "An epic tale of obsession and the sea. Melville's depth and symbolism are profound."
-      },
-      {
-        "id": 7,
-        "title": "War and Peace",
-        "author": "Leo Tolstoy",
-        "category": "Historical",
-        "book_image": "https://example.com/images/war-and-peace.jpg",
-        "price": 14.99,
-        "ratings": 4.9,
-        "review_text": "A monumental work of literature. Tolstoy's exploration of human nature and history is unparalleled."
-      },
-      {
-        "id": 8,
-        "title": "The Hobbit",
-        "author": "J.R.R. Tolkien",
-        "category": "Fantasy",
-        "book_image": "https://example.com/images/the-hobbit.jpg",
-        "price": 10.49,
-        "ratings": 4.8,
-        "review_text": "A charming and adventurous tale. Tolkien's world-building and storytelling are extraordinary."
-      },
-      {
-        "id": 9,
-        "title": "Fahrenheit 451",
-        "author": "Ray Bradbury",
-        "category": "Dystopian",
-        "book_image": "https://example.com/images/fahrenheit-451.jpg",
-        "price": 9.49,
-        "ratings": 4.6,
-        "review_text": "A powerful warning about censorship and conformity. Bradbury's vision is both alarming and inspiring."
-      },
-      {
-        "id": 10,
-        "title": "Jane Eyre",
-        "author": "Charlotte Brontë",
-        "category": "Classic",
-        "book_image": "https://example.com/images/jane-eyre.jpg",
-        "price": 11.49,
-        "ratings": 4.7,
-        "review_text": "A compelling story of resilience and self-discovery. Brontë's protagonist is unforgettable."
-      }
-    ]
-    
-      
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "category": "Classic",
+      "book_image": "https://img.freepik.com/premium-photo/wooden-table_36051-46.jpg?w=826",
+      "price": 10.99,
+      "ratings": 4.5,
+      "review_text": "A captivating tale of love, wealth, and the American Dream. Fitzgerald's prose is exquisite."
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "category": "Dystopian",
+      "book_image": "https://example.com/images/1984.jpg",
+      "price": 9.99,
+      "ratings": 4.8,
+      "review_text": "A chilling depiction of a dystopian future. Orwell's vision is both haunting and thought-provoking."
+    },
+    {
+      "id": "3",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "category": "Classic",
+      "book_image": "https://example.com/images/to-kill-a-mockingbird.jpg",
+      "price": 8.99,
+      "ratings": 4.9,
+      "review_text": "A powerful exploration of racial injustice in the Deep South. Lee's characters are deeply moving."
+    },
+    {
+      "id": "4",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "Romance",
+      "book_image": "https://example.com/images/pride-and-prejudice.jpg",
+      "price": 11.99,
+      "ratings": 4.7,
+      "review_text": "A delightful romantic comedy with sharp social commentary. Austen's wit is timeless."
+    },
+    {
+      "id": "5",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "category": "Classic",
+      "book_image": "https://example.com/images/catcher-in-the-rye.jpg",
+      "price": 7.99,
+      "ratings": 4.2,
+      "review_text": "A raw and honest portrayal of teenage angst. Salinger's narrative voice is unique and compelling."
+    },
+    {
+      "id": "6",
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "category": "Adventure",
+      "book_image": "https://example.com/images/moby-dick.jpg",
+      "price": 12.99,
+      "ratings": 4,
+      "review_text": "An epic tale of obsession and the sea. Melville's depth and symbolism are profound."
+    },
+    {
+      "id": "7",
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "category": "Historical",
+      "book_image": "https://example.com/images/war-and-peace.jpg",
+      "price": 14.99,
+      "ratings": 4.9,
+      "review_text": "A monumental work of literature. Tolstoy's exploration of human nature and history is unparalleled."
+    },
+    {
+      "id": "8",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "category": "Fantasy",
+      "book_image": "https://example.com/images/the-hobbit.jpg",
+      "price": 10.49,
+      "ratings": 4.8,
+      "review_text": "A charming and adventurous tale. Tolkien's world-building and storytelling are extraordinary."
+    },
+    {
+      "id": "9",
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "category": "Dystopian",
+      "book_image": "https://example.com/images/fahrenheit-451.jpg",
+      "price": 9.49,
+      "ratings": 4.6,
+      "review_text": "A powerful warning about censorship and conformity. Bradbury's vision is both alarming and inspiring."
+    },
+    {
+      "id": "10",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "category": "Classic",
+      "book_image": "https://example.com/images/jane-eyre.jpg",
+      "price": 11.49,
+      "ratings": 4.7,
+      "review_text": "A compelling story of resilience and self-discovery. Brontë's protagonist is unforgettable."
+    },
+    {
+      "id": "20",
+      "book": "test",
+      "author": "test",
+      "category": "test",
+      "price": "12",
+      "review": "test review",
+      "image_url": "test"
+    }
+  ]
 }

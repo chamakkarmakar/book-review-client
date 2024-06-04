@@ -3,9 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
 
-    <footer className="flex flex-col text-black">
-      <div className="flex justify-around items-center bg-sky-50 py-10">
-        <aside className="text-xl">
+    <footer className="flex flex-col text-white">
+      <div className="flex justify-around items-center bg-sky-800 py-10">
+        <aside className="text-2xl font-serif">
          
           <p>BookWorm</p>
         </aside>
@@ -23,7 +23,7 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <aside className="bg-sky-100 py-5 text-center text-sm">
+      <aside className="bg-sky-800 py-5 text-center text-sm">
         <p>&copy; 2024 BookWorm. All Rights Reserved.</p>
       </aside>
     </footer>

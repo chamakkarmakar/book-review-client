@@ -6,6 +6,8 @@ import SignUp from "../Pages/SignUp";
 import DashboardLayout from "../Layout/DashboardLayout";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../Pages/Dashboard";
+import AllReviews from "../Pages/AllReviews";
+import AddReviews from "../Pages/AddReviews";
 
 export const router = createBrowserRouter([
     {
@@ -17,11 +19,11 @@ export const router = createBrowserRouter([
           element: <Home />
         },
         {
-          path: "/login",
+          path: "login",
           element: <SignIn />
         },
         {
-          path: "/registration",
+          path: "registration",
           element: <SignUp />
         },
       ]
@@ -31,13 +33,30 @@ export const router = createBrowserRouter([
       element: <DashboardLayout />,
       children: [
           {
-              path: "/dashboard",
+              path: "dashboard-home",
               element: (
                   <PrivateRouter>
                       <Dashboard />
                   </PrivateRouter>
               ),
           },
+          {
+            path : "all-reviews",
+            element : (
+              <PrivateRouter>
+                <AllReviews />
+              </PrivateRouter>
+            )
+          },
+          {
+            path : "add",
+            element : (
+              <PrivateRouter>
+                <AddReviews />
+              </PrivateRouter>
+            )
+          }
+          
         ]
     }
   ]);
