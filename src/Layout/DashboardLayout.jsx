@@ -19,7 +19,7 @@ const DashboardLayout = () => {
 
           <ul className='flex flex-col justify-between text-center md:pt-32 pt-20'>
             <li className='text-white mb-5 md:text-lg text-md '>
-              <NavLink to="dashboard-home" className={({ isActive, isPending }) =>
+              <NavLink to="/dashboard" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "bg-sky-800 w-auto md:px-20 px-10 py-2" : ""
               }>Dashboard</NavLink>
             </li>

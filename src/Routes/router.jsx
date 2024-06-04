@@ -10,6 +10,7 @@ import AllReviews from "../Pages/AllReviews";
 import AddReviews from "../Pages/AddReviews";
 import EditReview from "../Pages/EditReview";
 import SingleDetails from "../Pages/SingleDetails";
+import EditProfile from "../Pages/EditProfile";
 
 export const router = createBrowserRouter([
     {
@@ -43,11 +44,23 @@ export const router = createBrowserRouter([
       element: <DashboardLayout />,
       children: [
           {
-              path: "dashboard-home",
+              path: "/dashboard",
               element: (
                   <PrivateRouter>
                       <Dashboard />
                   </PrivateRouter>
+              ),
+          },
+          {
+            path: "profile/edit/:id",
+            element: (
+              <PrivateRouter>
+                <EditProfile />
+              </PrivateRouter>
+            ),
+            loader: ({ params }) =>
+              fetch(
+                `http://localhost:5000/user/get/${params.id}`
               ),
           },
           {
