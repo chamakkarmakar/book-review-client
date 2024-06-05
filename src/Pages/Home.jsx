@@ -5,6 +5,7 @@ import Book from '../Components/Books/Book'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Categories from '../Components/Category/Categories';
 import Authors from '../Components/Authors/Authors';
+import Newsletter from '../Components/Newsletter/Newsletter';
 
 const Home = () => {
   const [books, setBooks] = useState([])
@@ -88,6 +89,11 @@ const Home = () => {
       <div className='my-20'>
       <h1 className='text-center text-5xl font-semibold font-serif'>Favourite Authors</h1>
       <Authors />
+      </div>
+
+      {/* Newsletter */}
+      <div className="py-20 bg-rose-50">
+        <Newsletter />
       </div>
     </div>
   )
