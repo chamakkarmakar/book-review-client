@@ -3,8 +3,8 @@ import Banner from '../Components/Banner/Banner'
 import Reviews from '../Components/BookReviews/Reviews'
 import Book from '../Components/Books/Book'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Category from '../Components/Category/Category';
 import Categories from '../Components/Category/Categories';
+import Authors from '../Components/Authors/Authors';
 
 const Home = () => {
   const [books, setBooks] = useState([])
@@ -82,6 +82,12 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Authors */}
+      <div className='my-20'>
+      <h1 className='text-center text-5xl font-semibold font-serif'>Favourite Authors</h1>
+      <Authors />
       </div>
     </div>
   )
