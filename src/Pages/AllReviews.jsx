@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import ReviewsCard from '../Components/ReviewsCard/ReviewsCard';
 import Toast from '../Components/Toast/Toast';
 
+
 const AllReviews = () => {
   const token = localStorage.getItem("token");
   const [books, setBooks] = useState([])
+  const [searchTerm, setSearchTerm] = useState('');
   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
@@ -34,29 +36,47 @@ const AllReviews = () => {
       setShowToast(false);
     }, 3000);
   };
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredData = books.filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+
   return (
     <div className='my-20 '>
-      <h1 className='text-center text-5xl font-semibold font-serif'>All Reviews</h1>
+      <div className="flex md:flex-row flex-col md:justify-between justify-center items-center mx-10">
+        <h1 className='text-center text-4xl font-semibold font-serif'>All Reviews</h1>
+        <div className="md:mt-0 mt-10">
+          <input
+            className='outline-none rounded-lg border-2 border-gray-300 px-5 py-2 w-full'
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleChange}
+          />
+
+        </div>
+      </div>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
         {
-          books.map((book, index) =>
-            <ReviewsCard 
-          key={index} 
-          book={book} 
-          handleDeleteReviews={handleDeleteReviews}
-          />
+          filteredData.map((book, index) =>
+            <ReviewsCard
+              key={index}
+              book={book}
+              handleDeleteReviews={handleDeleteReviews}
+            />
           )
         }
 
       </div>
       {
-                showToast &&
-                <Toast
-                    message="Reviews deleted successfully!"
-                    show={showToast}
-                    onClose={() => setShowToast(false)}
-                />
-            }
+        showToast &&
+        <Toast
+          message="Reviews deleted successfully!"
+          show={showToast}
+          onClose={() => setShowToast(false)}
+        />
+      }
     </div>
   )
 }

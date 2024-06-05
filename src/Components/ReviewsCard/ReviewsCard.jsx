@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ReviewsCard = ({ book, handleDeleteReviews }) => {
   const { title, book_image, author, review_text, ratings, category, _id } = book
   return (
-    <div className="mx-auto my-20 w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4 font-sans shadow-lg dark:bg-[#18181B]">
+    <div className="mx-auto my-10 w-[350px] space-y-6 rounded-xl bg-white px-4 pb-8 pt-4 font-sans shadow-lg dark:bg-[#18181B]">
       <div className="flex h-44 w-full justify-center lg:h-[250px]">
         <img width={300} height={300} className="h-full w-full rounded-lg bg-black/40" src={book_image} alt={title} />
       </div>
