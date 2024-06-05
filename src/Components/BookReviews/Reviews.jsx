@@ -8,7 +8,7 @@ const Reviews = ({ book }) => {
     <div className="p-4 min-w-full md:min-w-[50%] ">
       <div className="h-full p-8 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.1)] bg-white">
         <div className="flex justify-between items-center">
-          <ImQuotesRight className='w-10 h-10 text-sky-800' />
+          <ImQuotesRight className='w-10 h-10 text-sky-600' />
           <p className='flex items-center'>
             <MdOutlineStarRate className='w-5 h-5 text-amber-500 inline' />
             <MdOutlineStarRate className='w-5 h-5 text-amber-500 inline' />
