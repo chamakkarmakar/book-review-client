@@ -23,7 +23,7 @@ const SignUp = () => {
                 email: data?.user?.email,
                 name: name,
               };
-              fetch("http://localhost:5000/user", {
+              fetch("https://book-review-server.vercel.app/user", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

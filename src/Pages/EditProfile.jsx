@@ -14,7 +14,7 @@ const EditProfile = () => {
         const mobile = form.mobile.value;
         const userData = { name, mobile, };
         fetch(
-            `http://localhost:5000/user/${user?.email}`,
+            `https://book-review-server.vercel.app/user/${user?.email}`,
             {
                 method: "PATCH",
                 headers: {

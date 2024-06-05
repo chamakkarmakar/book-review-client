@@ -13,7 +13,7 @@ const DashboardLayout = () => {
         <label htmlFor="my-drawer-2" className="btn drawer-button lg:hidden">
           <RiMenu2Fill className=' w-7 h-7 ' />
         </label>
-        <div className='md:w-3/4 w-full mx-auto '>
+        <div className='md:w-[90%] w-full mx-auto '>
           <Outlet />
         </div>
       </div>
