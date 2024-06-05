@@ -35,7 +35,7 @@ const AllReviews = () => {
     }, 3000);
   };
   return (
-    <div className='my-20'>
+    <div className='my-20 '>
       <h1 className='text-center text-5xl font-semibold font-serif'>All Reviews</h1>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
         {

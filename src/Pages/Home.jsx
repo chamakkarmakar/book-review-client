@@ -5,7 +5,7 @@ import Book from '../Components/Books/Book'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Categories from '../Components/Category/Categories';
 import Authors from '../Components/Authors/Authors';
-import Newsletter from '../Components/Newsletter/Newsletter';
+import Newsletter from '../Components/News/Newsletter';
 
 const Home = () => {
   const [books, setBooks] = useState([])
