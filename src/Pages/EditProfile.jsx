@@ -14,7 +14,7 @@ const EditProfile = () => {
         const mobile = form.mobile.value;
         const userData = { name, mobile, };
         fetch(
-            `https://book-review-server.vercel.app/user/${user?.email}`,
+            `http://localhost:5000/user/${user?.email}`,
             {
                 method: "PATCH",
                 headers: {
@@ -45,14 +45,16 @@ const EditProfile = () => {
                     type="text"
                     placeholder="Username"
                     name="name"
-                    defaultValue={user?.name} />
+                    defaultValue={user?.name} 
+
+                    />
 
                 <input
                     className="w-[80%] rounded-lg border border-indigo-500 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 md:w-[60%]"
                     type="email"
                     placeholder="Email"
                     name="email"
-                    value={user?.email}
+                    defaultValue={user?.email}
                     disabled
                 />
 
@@ -60,8 +62,10 @@ const EditProfile = () => {
                     className="w-[80%] rounded-lg border border-indigo-500 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 md:w-[60%]"
                     type="number"
                     placeholder="Mobile"
-                    name="mobile" />
-
+                    name="mobile"
+                    defaultValue={user?.mobile}
+                 
+                />
                 <input className="w-[80%] rounded-lg bg-indigo-500 cursor-pointer hover:bg-indigo-700 px-6 py-2 font-medium text-white md:w-[60%]" type="submit" />
             </form>
             {

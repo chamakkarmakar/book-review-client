@@ -11,7 +11,7 @@ const Home = () => {
   const [books, setBooks] = useState([])
   useEffect(() => {
     async function load() {
-      const booksRes = await fetch("https://book-review-server.vercel.app/books");
+      const booksRes = await fetch("http://localhost:5000/books");
       const booksData = await booksRes.json();
       setBooks(booksData);
     }

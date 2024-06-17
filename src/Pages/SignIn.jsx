@@ -14,12 +14,24 @@ const SignIn = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(email, password);
 
         signIn(email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
+                const loggeduser = userCredential.user;
+                console.log(loggeduser);
+                const user = { email }
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(user),
+                    withCredentials: true
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                    });
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -30,9 +42,9 @@ const SignIn = () => {
     };
     useEffect(() => {
         if (user) {
-          navigate(from, { replace: true });
+            navigate(from, { replace: true });
         }
-      }, [user, from, navigate]);
+    }, [user, from, navigate]);
 
     return (
         <div className="flex h-screen items-center justify-center bg-indigo-500/20 p-6 md:p-0">

@@ -23,25 +23,28 @@ const SignUp = () => {
                 email: data?.user?.email,
                 name: name,
               };
-              fetch("https://book-review-server.vercel.app/user", {
+              fetch("http://localhost:5000/user", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(userInfo),
+                withCredentials: true
               })
                 .then((res) => res.json())
-                .then((data) => console.log(data));
+                .then((data) => {
+                    console.log(data);
+                });
             }
           })
-            // .then((userCredential) => {
-            //     const user = userCredential.user;
-            //     console.log(user);
-            // })
-            // .catch((error) => {
-            //     const errorMessage = error.message;
-            //     console.log(errorMessage);
-            // });
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+            })
+            
+            .catch((error) => {
+                console.error(error.message)
+            });
         event.target.reset();
     }
     useEffect(() => {

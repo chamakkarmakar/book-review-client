@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
           element: <SingleDetails />,
           loader: ({ params }) =>
             fetch(
-              `https://book-review-server.vercel.app/books/${params.id}`
+              `http://localhost:5000/books/${params.id}`
             ),
         },
         {
@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
             ),
             loader: ({ params }) =>
               fetch(
-                `https://book-review-server.vercel.app/user/get/${params.id}`
+                `http://localhost:5000/user/get/${params.id}`
               ),
           },
           {
@@ -87,7 +87,7 @@ export const router = createBrowserRouter([
               </PrivateRouter>
             ),
             loader: ({ params }) =>
-              fetch(`https://book-review-server.vercel.app/books/${params.id}`),
+              fetch(`http://localhost:5000/books/${params.id}`),
           },
           
         ]

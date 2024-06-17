@@ -30,7 +30,7 @@ const EditReview = () => {
 
         const data = { title, author, category,book_image , price, ratings, review_text};
 
-        await fetch(`https://book-review-server.vercel.app/books/${book._id}`, {
+        await fetch(`http://localhost:5000/books/${book._id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
