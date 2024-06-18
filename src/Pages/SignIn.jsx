@@ -20,7 +20,7 @@ const SignIn = () => {
                 const loggeduser = userCredential.user;
                 console.log(loggeduser);
                 const user = { email }
-                fetch("http://localhost:5000/user", {
+                fetch("https://book-review-server.vercel.app/user", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

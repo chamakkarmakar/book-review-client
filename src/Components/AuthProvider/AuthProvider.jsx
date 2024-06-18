@@ -28,8 +28,8 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logout = () => {
-    return signOut(auth).then(() => setUser(null));
+  const logOut = async () => {
+    return await signOut(auth).then(() => setUser(null));
   };
 
   const signWithGoogle = () => {
@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const authInfo = { user, signWithGoogle, createUser, signIn, logout, loading };
+  const authInfo = { user, signWithGoogle, createUser, signIn, logOut, loading };
   return (
 
     <AuthContext.Provider value={authInfo}>

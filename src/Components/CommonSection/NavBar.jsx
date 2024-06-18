@@ -28,6 +28,7 @@ const NavBar = () => {
 
   ]
   const handleSignOut = async () => {
+    localStorage.removeItem("token")
     await logout();
   }
 

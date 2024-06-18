@@ -19,7 +19,7 @@ const AddReviews = () => {
 
         const data = { title, author, category, book_image, price, ratings, review_text };
 
-        await fetch("http://localhost:5000/books", {
+        await fetch("https://book-review-server.vercel.app/books", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
