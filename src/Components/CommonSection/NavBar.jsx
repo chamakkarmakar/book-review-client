@@ -23,11 +23,8 @@ const NavBar = () => {
     {
       menu: 'reviews',
       url: '/allreviews'
-    },
-    {
-      menu: 'blog',
-      url: '/blog'
     }
+    
 
   ]
   const handleSignOut = async () => {
@@ -83,7 +80,7 @@ const NavBar = () => {
           <div className='md:hidden block mx-5'>
             <button onClick={() => setOpen(!open)}>
               {
-                !open ? <HiOutlineMenu className='w-6 h-6 text-sky-700' /> : <HiOutlineX className='w-6 h-6 text-sky-700' />
+                !open ? <HiOutlineMenu className='w-6 h-6 text-sky-100' /> : <HiOutlineX className='w-6 h-6 text-sky-100' />
               }
             </button>
           </div>

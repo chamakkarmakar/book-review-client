@@ -13,6 +13,7 @@ import SingleDetails from "../Pages/SingleDetails";
 import EditProfile from "../Pages/EditProfile";
 import AllBooks from "../Pages/AllBooks";
 import ReviewsAll from "../Pages/ReviewsAll";
+import About from "../Pages/About";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/about",
+        element: <About />
       },
       {
         path: "/books/:id",
