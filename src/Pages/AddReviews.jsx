@@ -26,6 +26,7 @@ const AddReviews = () => {
                 authorization: `Bearer ${token}`,
             },
             body: JSON.stringify(data),
+            withCredentials: true
         })
             .then((res) => res.json())
             .then((data) => {

@@ -38,7 +38,7 @@ const Authors = () => {
     return (
         <div className="max-w-4xl mx-auto h-[540px] md:h-[670px] flex flex-col xl:flex-row items-center overflow-hidden gap-5 lg:gap-10 relative">
 
-            <div className="absolute w-full h-full flex items-center justify-between z-50 px-5">
+            <div className="absolute w-full h-full flex items-center justify-between z-10 px-5">
                 {/* arrow left */}
                 <button onClick={prevSlider} className="flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-8 md:h-8">
                     <IoIosArrowBack className='w-7 h-7 text-sky-500' />

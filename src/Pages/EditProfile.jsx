@@ -1,17 +1,35 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom';
 import Toast from '../Components/Toast/Toast';
+import { getAuth,updatePassword  } from 'firebase/auth';
+import { app } from '../firebase/firebase.config';
+
 
 const EditProfile = () => {
+    const auth = getAuth(app);
+
     const token = localStorage.getItem("token");
-    const user = useLoaderData();
+    const userInfo = useLoaderData();
     const [showToast, setShowToast] = useState(false);
+    const [newPassword, setNewPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const mobile = form.mobile.value;
+
+        const user = auth.currentUser;
+        if (user) {
+            updatePassword(user, newPassword).then(() => {
+                console.log('updated');
+              }).catch((error) => {
+                console.log(error);
+              });
+        } else {
+            setError('No user is currently logged in.');
+        }
+
         const userData = { name, mobile, };
         fetch(
             `http://localhost:5000/user/${user?.email}`,
@@ -45,16 +63,16 @@ const EditProfile = () => {
                     type="text"
                     placeholder="Username"
                     name="name"
-                    defaultValue={user?.name} 
+                    defaultValue={userInfo?.name}
 
-                    />
+                />
 
                 <input
                     className="w-[80%] rounded-lg border border-indigo-500 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 md:w-[60%]"
                     type="email"
                     placeholder="Email"
                     name="email"
-                    defaultValue={user?.email}
+                    defaultValue={userInfo?.email}
                     disabled
                 />
 
@@ -63,9 +81,19 @@ const EditProfile = () => {
                     type="number"
                     placeholder="Mobile"
                     name="mobile"
-                    defaultValue={user?.mobile}
-                 
+                    defaultValue={userInfo?.mobile}
+
                 />
+
+                <input
+                    className="w-[80%] rounded-lg border border-indigo-500 px-6 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 md:w-[60%]"
+                    type="password"
+                    placeholder="New Password"
+                    name="newPassword"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                />
+
                 <input className="w-[80%] rounded-lg bg-indigo-500 cursor-pointer hover:bg-indigo-700 px-6 py-2 font-medium text-white md:w-[60%]" type="submit" />
             </form>
             {

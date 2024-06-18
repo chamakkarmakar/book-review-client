@@ -19,29 +19,31 @@ const SignUp = () => {
 
         createUser(email, password).then((data) => {
             if (data?.user?.email) {
-              const userInfo = {
-                email: data?.user?.email,
-                name: name,
-              };
-              fetch("http://localhost:5000/user", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(userInfo),
-                withCredentials: true
-              })
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(data);
-                });
+                const userInfo = {
+                    email: data?.user?.email,
+                    name: name,
+                };
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(userInfo),
+                    withCredentials: true
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        const token = data.token;
+                        localStorage.setItem('token', token)
+                    });
             }
-          })
+        })
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user);
             })
-            
+
             .catch((error) => {
                 console.error(error.message)
             });

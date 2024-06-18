@@ -33,7 +33,7 @@ const NavBar = () => {
 
 
   return (
-    <div className="sticky top-0 max-w-full z-10">
+    <div className="sticky top-0 max-w-full z-50">
       <div className='py-3 bg-sky-800'>
         <nav className="flex justify-between items-center w-full">
           <div className='md:w-1/5 w-4/5 md:mx-10 mx-5 transition-all duration-150 ease-linear delay-75 flex items-center'>
