@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const NavBar = () => {
-  const { user, logout } = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
   const [open, setOpen] = useState(false);
 
   const menuItems = [
@@ -29,7 +29,7 @@ const NavBar = () => {
   ]
   const handleSignOut = async () => {
     localStorage.removeItem("token")
-    await logout();
+    await logOut();
   }
 
 
