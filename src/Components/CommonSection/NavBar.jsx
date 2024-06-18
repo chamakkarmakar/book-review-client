@@ -18,11 +18,15 @@ const NavBar = () => {
     },
     {
       menu: 'books',
-      url: '/books'
+      url: '/allbooks'
     },
     {
-      menu: 'contact',
-      url: '/contact'
+      menu: 'reviews',
+      url: '/allreviews'
+    },
+    {
+      menu: 'blog',
+      url: '/blog'
     }
 
   ]

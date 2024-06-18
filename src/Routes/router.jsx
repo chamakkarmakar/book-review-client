@@ -11,85 +11,95 @@ import AddReviews from "../Pages/AddReviews";
 import EditReview from "../Pages/EditReview";
 import SingleDetails from "../Pages/SingleDetails";
 import EditProfile from "../Pages/EditProfile";
+import AllBooks from "../Pages/AllBooks";
+import ReviewsAll from "../Pages/ReviewsAll";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout />,
-      children : [
-        {
-          path: "/",
-          element: <Home />
-        },
-        {
-          path: "/books/:id",
-          element: <SingleDetails />,
-          loader: ({ params }) =>
-            fetch(
-              `http://localhost:5000/books/${params.id}`
-            ),
-        },
-        {
-          path: "login",
-          element: <SignIn />
-        },
-        {
-          path: "registration",
-          element: <SignUp />
-        },
-      ]
-    },
-    {
-      path: "/dashboard",
-      element: <DashboardLayout />,
-      children: [
-          {
-              path: "/dashboard",
-              element: (
-                  <PrivateRouter>
-                      <Dashboard />
-                  </PrivateRouter>
-              ),
-          },
-          {
-            path: "profile/edit/:id",
-            element: (
-              <PrivateRouter>
-                <EditProfile />
-              </PrivateRouter>
-            ),
-            loader: ({ params }) =>
-              fetch(
-                `http://localhost:5000/user/get/${params.id}`
-              ),
-          },
-          {
-            path : "all-reviews",
-            element : (
-              <PrivateRouter>
-                <AllReviews />
-              </PrivateRouter>
-            )
-          },
-          {
-            path : "add",
-            element : (
-              <PrivateRouter>
-                <AddReviews />
-              </PrivateRouter>
-            )
-          },
-          {
-            path: "all-reviews/edit/:id",
-            element: (
-              <PrivateRouter>
-                <EditReview />
-              </PrivateRouter>
-            ),
-            loader: ({ params }) =>
-              fetch(`http://localhost:5000/books/${params.id}`),
-          },
-          
-        ]
-    }
-  ]);
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/books/:id",
+        element: <SingleDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/books/${params.id}`
+          ),
+      },
+      {
+        path: "/allbooks",
+        element : <AllBooks />
+      },
+      {
+        path: "/allreviews",
+        element : <ReviewsAll />
+      },
+      {
+        path: "login",
+        element: <SignIn />
+      },
+      {
+        path: "registration",
+        element: <SignUp />
+      },
+    ]
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRouter>
+            <Dashboard />
+          </PrivateRouter>
+        ),
+      },
+      {
+        path: "profile/edit/:id",
+        element: (
+          <PrivateRouter>
+            <EditProfile />
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/user/get/${params.id}`
+          ),
+      },
+      {
+        path: "all-reviews",
+        element: (
+          <PrivateRouter>
+            <AllReviews />
+          </PrivateRouter>
+        )
+      },
+      {
+        path: "add",
+        element: (
+          <PrivateRouter>
+            <AddReviews />
+          </PrivateRouter>
+        )
+      },
+      {
+        path: "all-reviews/edit/:id",
+        element: (
+          <PrivateRouter>
+            <EditReview />
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/books/${params.id}`),
+      },
+
+    ]
+  }
+]);

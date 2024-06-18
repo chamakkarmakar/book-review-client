@@ -6,6 +6,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Categories from '../Components/Category/Categories';
 import Authors from '../Components/Authors/Authors';
 import Newsletter from '../Components/News/Newsletter';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [books, setBooks] = useState([])
@@ -18,6 +19,7 @@ const Home = () => {
     load();
   }, [])
 
+  // Reviews
   const [currentSlider, setCurrentSlider] = useState(0);
 
   const prevSlider = () => setCurrentSlider((currentSlider) => (currentSlider === 0 ? books.length - 2 : currentSlider - 1));
@@ -48,11 +50,14 @@ const Home = () => {
         <h1 className='text-center text-5xl font-semibold font-serif'>Popular Books</h1>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-6'>
           {
-            books.map((book, index) =>
+            books.slice(0, 6).map((book, index) =>
               <Book key={index} book={book} />
             )
           }
 
+        </div>
+        <div className="flex md:w-1/2 w-full mx-auto justify-around  items-center">
+          <button className="text-md w-32 h-14 bg-sky-500 text-white rounded-lg relative overflow-hidden group z-10 hover:text-white duration-1000"><span className="absolute bg-sky-600 size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span><span className="absolute bg-sky-800 size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span><Link to="/allbooks">View All</Link></button>
         </div>
       </div>
 
@@ -87,8 +92,8 @@ const Home = () => {
 
       {/* Authors */}
       <div className='my-20'>
-      <h1 className='text-center text-5xl font-semibold font-serif'>Favourite Authors</h1>
-      <Authors />
+        <h1 className='text-center text-5xl font-semibold font-serif'>Favourite Authors</h1>
+        <Authors />
       </div>
 
       {/* Newsletter */}

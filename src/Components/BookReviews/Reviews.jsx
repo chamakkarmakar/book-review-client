@@ -5,7 +5,7 @@ import { MdOutlineStarRate } from "react-icons/md";
 const Reviews = ({ book }) => {
   const { title, book_image, author, review_text, ratings, category } = book
   return (
-    <div className="p-4 min-w-full md:min-w-[50%] ">
+    <div className="p-4 min-w-full md:min-w-[40%] ">
       <div className="h-full p-8 rounded-lg shadow-[0px_4px_12px_rgba(0,0,0,0.1)] bg-white">
         <div className="flex justify-between items-center">
           <ImQuotesRight className='w-10 h-10 text-sky-600' />
